@@ -2,11 +2,21 @@
 const intro = document.getElementById("intro");
 const site = document.getElementById("site");
 const enterBtn = document.getElementById("enterBtn");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicStatus = document.getElementById("musicStatus");
 
 // Mo trang profile
 enterBtn.addEventListener("click", () => {
   intro.classList.add("exit");
   site.classList.remove("hidden");
+
+  // Phát nhạc từ thao tác vào hồ sơ để đáp ứng chính sách autoplay của trình duyệt.
+  backgroundMusic.volume = 0.4;
+  backgroundMusic.play().then(() => {
+    musicStatus.textContent = "Đang phát · Bạn có thể tạm dừng bằng nút điều khiển.";
+  }).catch(() => {
+    musicStatus.textContent = "Trình duyệt đã chặn tự phát. Bấm nút phát bên trên để nghe nhạc.";
+  });
 
   // Bat dau hien cac hieu ung
   setTimeout(() => {
