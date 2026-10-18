@@ -511,6 +511,37 @@ button:focus-visible, a:focus-visible {
   padding-bottom: 100px;
 }
 
+.music-player {
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--panel);
+}
+
+.music-player h3 {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.music-player audio {
+  width: 100%;
+  height: 42px;
+}
+
+.music-credit {
+  width: fit-content;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.music-credit:hover {
+  color: var(--cyan);
+}
+
 footer {
   display: flex;
   justify-content: space-between;
