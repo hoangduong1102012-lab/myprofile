@@ -345,17 +345,15 @@ button:focus-visible, a:focus-visible {
 }
 
 .avatar {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 105px;
   height: 105px;
   margin: 35px auto 20px;
   border: 1px solid #a49bff80;
   border-radius: 50%;
-  background: linear-gradient(135deg, #7868f45c, #65e5e01c);
-  color: #dcd8ff;
-  font-size: 2rem;
-  font-weight: 800;
+  object-fit: cover;
+  object-position: center 30%;
+  background: #161c2b;
   box-shadow: 0 0 40px #8b7cff20;
 }
 
